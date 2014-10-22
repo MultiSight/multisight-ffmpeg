@@ -16,7 +16,7 @@ if(CMAKE_SYSTEM MATCHES "Linux-")
 
   ExternalProject_Add(
     ffmpeg_linux
-    URL ${CMAKE_CURRENT_SOURCE_DIR}/ffmpeg-2014-10-12.tar.bz2
+    URL ${CMAKE_CURRENT_SOURCE_DIR}/ffmpeg-1.2.0.tar.bz2
     SOURCE_DIR ${CMAKE_CURRENT_BINARY_DIR}/ffmpeg_sources
     CONFIGURE_COMMAND ${CMAKE_CURRENT_BINARY_DIR}/ffmpeg_sources/configure --extra-cflags=-I${devel_artifacts_path}/include/x264 --extra-ldflags=-L${devel_artifacts_path}/lib --prefix=${CMAKE_CURRENT_BINARY_DIR}/artifacts --enable-gpl --enable-libx264 --disable-static --enable-shared --enable-pthreads --enable-runtime-cpudetect
     PREFIX ${CMAKE_CURRENT_BINARY_DIR}/artifacts
